@@ -22,5 +22,7 @@ curl --include --request PATCH http://localhost:3000/ingredients/4 \
     }
   }'
 
+curl --include --request DELETE http://localhost:3000/ingredients/3
+
 
 
