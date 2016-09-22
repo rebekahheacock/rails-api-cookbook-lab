@@ -1,5 +1,5 @@
 class IngredientsController < ApplicationController
-  before_action :set_ingredient, only: [:show]
+  before_action :set_ingredient, only: [:show, :update]
 
   def set_ingredient
     @ingredient = Ingredient.find(params[:id])
@@ -23,6 +23,14 @@ class IngredientsController < ApplicationController
 
     if @ingredient.save
       render json: @ingredient, status: :created
+    else
+      render json: @ingredient.errors, status: :unprocessable_entity
+    end
+  end
+
+  def update
+    if @ingredient.update(ingredient_params)
+      head :no_content
     else
       render json: @ingredient.errors, status: :unprocessable_entity
     end
