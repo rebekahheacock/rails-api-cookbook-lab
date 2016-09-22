@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
 
   get '/ingredients' => 'ingredients#index'
+  get '/ingredients/:id' => 'ingredients#show'
 end
