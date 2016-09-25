@@ -11,4 +11,6 @@ Rails.application.routes.draw do
   post '/ingredients/' => 'ingredients#create'
   patch '/ingredients/:id' => 'ingredients#update'
   delete '/ingredients/:id' => 'ingredients#destroy'
+
+  resources :recipes, only: [:index, :show, :create, :update, :destroy]
 end
