@@ -27,35 +27,63 @@ Ingredient.create([
                       name: 'flour',
                       std_measure: 'cup',
                       color: 'white',
-                      toxicity: false,
-                      recipe_id: 1
+                      toxicity: false
                     },
                     {
                       name: 'sugar',
                       std_measure: 'cup',
                       color: 'white',
-                      toxicity: false,
-                      recipe_id: 1
+                      toxicity: false
                     },
                     {
                       name: 'butter',
                       std_measure: 'stick',
                       color: 'yellow',
-                      toxicity: false,
-                      recipe_id: 1
+                      toxicity: false
                     },
                     {
                       name: 'bread',
                       std_measure: 'slice',
                       color: 'tan',
-                      toxicity: false,
-                      recipe_id: 2
+                      toxicity: false
                     },
                     {
                       name: 'cheese',
                       std_measure: 'oz',
                       color: 'white',
-                      toxicity: false,
-                      recipe_id: 2
+                      toxicity: false
                     }
                   ])
+
+Amount.create([
+                {
+                  quantity: 2.75,
+                  ingredient_id: 1,
+                  recipe_id: 1
+                },
+                {
+                  quantity: 1.5,
+                  ingredient_id: 2,
+                  recipe_id: 1
+                },
+                {
+                  quantity: 2,
+                  ingredient_id: 3,
+                  recipe_id: 1
+                },
+                {
+                  quantity: 0.125,
+                  ingredient_id: 3,
+                  recipe_id: 2
+                },
+                {
+                  quantity: 2,
+                  ingredient_id: 4,
+                  recipe_id: 2
+                },
+                {
+                  quantity: 2,
+                  ingredient_id: 5,
+                  recipe_id: 2
+                }
+              ])
